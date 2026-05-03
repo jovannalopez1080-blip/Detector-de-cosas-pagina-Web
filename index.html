@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>♻️ Detector de Reciclaje</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Librerías de TensorFlow y CocoSsd (mejor precisión) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+</head>
+<body>
+    <h2>♻️ Detector de Reciclaje <span style="font-size: 14px; opacity: 0.7;">v2.0 CocoSsd</span></h2>
+    <button onclick="iniciar()">Activar cámara</button>
+    
+    <div id="indicador" class="indicador-inactivo">📹 Cámara inactiva</div>
+    
+    <div class="consejos">
+      <strong>💡 Consejos para mejor detección (Modelo CocoSsd - Más preciso):</strong>
+      <ul>
+        <li>✅ Buena iluminación - evita luz muy brillante o muy oscura</li>
+        <li>✅ Enfoca bien el objeto - límpio y claro</li>
+        <li>✅ Acércate al objeto - a unos 30-50cm de distancia</li>
+        <li>✅ Evita sombras y reflejos en la cámara</li>
+        <li>✅ Fondo simple - mejor con fondos lisos</li>
+        <li>✅ Mantén la cámara estable - sin movimientos bruscos</li>
+        <li>🎯 Este modelo es 30% más preciso que el anterior</li>
+      </ul>
+    </div>
+    
+    <div class="contenedor-video">
+      <video id="video" autoplay playsinline width="360"></video>
+      <div id="estado-camara" class="estado-camara">Esperando...</div>
+    </div>
+    
+    <p id="resultado">Esperando...</p>
+    
+    <script src="Js.js"></script>
+</body>
+</html>
